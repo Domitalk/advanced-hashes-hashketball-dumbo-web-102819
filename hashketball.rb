@@ -193,14 +193,14 @@ def player_stats(player_name)
         teamcolorplayer.each do |players_array|
           players_array.each do |player_key, player_value|
             if player_key == player_name
-              player_hash_temp = player_value
+              return player_value
             end
           end
         end
       end
     end
   end
-  player_hash_temp
+  
 end
 
 def big_shoe_rebounds
