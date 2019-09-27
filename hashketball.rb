@@ -246,8 +246,7 @@ end
 def winning_team
   home_total = 0
   away_total = 0
-  new_hash = game_hash
-  new_hash.each do |location, team|
+  game_hash.each do |location, team|
     team.each do |category, teamcolorplayer|
       if category == :players
         teamcolorplayer.each do |players_array|
