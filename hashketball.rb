@@ -204,8 +204,8 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds
-  biggest_shoe_rebounds = 1
-  largest_shoe = 1
+  biggest_shoe_rebounds = 0
+  largest_shoe = 0
   game_hash.each do |location, team|
     team.each do |category, teamcolorplayer|
        if category == :players
