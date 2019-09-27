@@ -169,12 +169,11 @@ end
 
 def player_numbers(team_name)
   array_of_jeresy_number = []
-  new_hash = game_hash
-  new_hash.each do |location, team|
-    team.each do |category, mixedvalues|
+  game_hash.each do |location, team|
+    team.each do |category, teamcolorplayer|
       if category == :players
-         mixedvalues.each do |playerunknown|
-           playerunknown.each do |player_key, player_value|
+         teamcolorplayer.each do |players_array|
+           players_array.each do |player_key, player_value|
              if team[:team_name] == team_name
                array_of_jeresy_number.push(player_value[:number])
              end
