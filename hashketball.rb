@@ -225,7 +225,7 @@ end
 
 def most_points_scored
   player_temp = ""
-  points_temp = 1
+  points_temp = 0
   game_hash.each do |location, team|
     team.each do |category, teamcolorplayer|
       if category == :players
