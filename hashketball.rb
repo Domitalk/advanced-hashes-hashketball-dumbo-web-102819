@@ -206,8 +206,7 @@ end
 def big_shoe_rebounds
   biggest_shoe_rebounds = 1
   largest_shoe = 1
-  new_hash = game_hash
-  new_hash.each do |location, team|
+  game_hash.each do |location, team|
     team.each do |category, teamcolorplayer|
        if category == :players
           teamcolorplayer.each do |players_array|
