@@ -220,7 +220,7 @@ def big_shoe_rebounds
        end
     end
   end
-  return biggest_shoe_rebounds
+  biggest_shoe_rebounds
 end
 
 def most_points_scored
