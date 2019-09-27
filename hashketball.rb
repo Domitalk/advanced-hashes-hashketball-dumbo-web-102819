@@ -187,12 +187,11 @@ end
 
 def player_stats(player_name)
   player_hash_temp = {}
-  new_hash = game_hash
-  new_hash.each do |location, team|
-    team.each do |category, mixedvalues|
+  game_hash.each do |location, team|
+    team.each do |category, teamcolorplayer|
       if category == :players
-        mixedvalues.each do |playerunknown|
-          playerunknown.each do |player_key, player_value|
+        teamcolorplayer.each do |players_array|
+          players_array.each do |player_key, player_value|
             if player_key == player_name
               player_hash_temp = player_value
             end
