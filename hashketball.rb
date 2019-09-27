@@ -118,18 +118,18 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  new_hash = game_hash
-  new_hash.each do |location, team|
-    team.each do |category, mixedvalues|
-       if category == :players
-          mixedvalues.each do |playerunknown|
-            playerunknown.each do |player_key, player_value|
-              if player_name == player_key
-                return player_value[:points]
-              end
+  game_hash
+  game_hash.each do |location, team|
+    team.each do |category, teamcolorplayer|
+      if category == :players
+        teamcolorplayer.each do |players_array|
+          players_array.each do |player_key, player_value|
+            if player_name == player_key
+              return player_value[:points]
             end
           end
-       end
+        end
+      end
     end
   end
 end
