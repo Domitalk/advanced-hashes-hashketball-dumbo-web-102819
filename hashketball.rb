@@ -186,7 +186,6 @@ def player_numbers(team_name)
 end
 
 def player_stats(player_name)
-  player_hash_temp = {}
   game_hash.each do |location, team|
     team.each do |category, teamcolorplayer|
       if category == :players
@@ -200,7 +199,6 @@ def player_stats(player_name)
       end
     end
   end
-  
 end
 
 def big_shoe_rebounds
