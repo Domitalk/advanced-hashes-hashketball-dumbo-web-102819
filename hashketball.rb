@@ -158,9 +158,8 @@ def team_colors(team_name)
 end
 
 def team_names
-  new_hash = game_hash
   team_names_array = []
-  new_hash.each do |location, team|
+  game_hash.each do |location, team|
     if team_names_array[0] != team[:team_name] && team_names_array[1] != team[:team_name]
     team_names_array.push(team[:team_name])
     end
