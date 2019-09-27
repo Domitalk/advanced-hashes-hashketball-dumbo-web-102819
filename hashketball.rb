@@ -270,9 +270,8 @@ end
 
 def player_with_longest_name
   player_temp = ""
-  length_temp = 1
-  new_hash = game_hash
-  new_hash.each do |location, team|
+  length_temp = 0
+  game_hash.each do |location, team|
     team.each do |category, teamcolorplayer|
       if category == :players
         teamcolorplayer.each do |players_array|
@@ -292,9 +291,8 @@ end
 def long_name_steals_a_ton?
   compare_1 = player_with_longest_name
   player_temp = ""
-  steals_temp = 1
-  new_hash = game_hash
-  new_hash.each do |location, team|
+  steals_temp = 0
+  game_hash.each do |location, team|
     team.each do |category, teamcolorplayer|
       if category == :players
         teamcolorplayer.each do |players_array|
